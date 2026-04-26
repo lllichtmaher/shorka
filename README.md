@@ -1,4 +1,4 @@
-~# VoiceCtl
+## VoiceCtl
 
 A voice-controlled computer for blind users. Speak naturally; the assistant interprets intent, executes actions on Windows, and narrates everything as it goes — because the user can't see the screen.
 
