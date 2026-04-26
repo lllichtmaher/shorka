@@ -1,0 +1,30 @@
+{
+  "default": "rachel",
+  "profiles": {
+    "rachel": {
+      "id": "21m00Tcm4TlvDq8ikWAM",
+      "name": "Rachel",
+      "aliases": ["default", "female", "calm"]
+    },
+    "antoni": {
+      "id": "ErXwobaYiN019PkySvjV",
+      "name": "Antoni",
+      "aliases": ["male", "american", "warm"]
+    },
+    "daniel": {
+      "id": "onwK4e9ZLuTAKqWW03F9",
+      "name": "Daniel",
+      "aliases": ["british", "uk", "english", "male british"]
+    },
+    "bella": {
+      "id": "EXAVITQu4vr4xnSDxMaL",
+      "name": "Bella",
+      "aliases": ["soft", "young", "gentle"]
+    },
+    "adam": {
+      "id": "pNInz6obpgDQGcFmaJgB",
+      "name": "Adam",
+      "aliases": ["deep", "narrator", "male deep"]
+    }
+  }
+}

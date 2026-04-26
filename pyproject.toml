@@ -1,0 +1,57 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "voicectl"
+version = "0.1.0"
+description = "Voice-controlled computer for blind users"
+requires-python = ">=3.11"
+dependencies = [
+  "anthropic>=0.40.0",
+  "openai>=1.50.0",
+  "elevenlabs>=1.0.0",
+  "sounddevice>=0.4.6",
+  "numpy>=1.26.0",
+  "silero-vad>=5.1.0",
+  "torch>=2.2.0",
+  "rapidfuzz>=3.0.0",
+  "pydantic>=2.0",
+  "pydantic-settings>=2.0",
+  "python-dotenv>=1.0",
+  "httpx>=0.27.0",
+  "websockets>=12.0",
+  "structlog>=24.0",
+  "pillow>=10.0.0",
+]
+
+[project.optional-dependencies]
+windows = [
+  "uiautomation>=2.0.18",
+  "pywinauto>=0.6.8",
+  "pyautogui>=0.9.54",
+  # winsdk removed — requires MSVC to build; OCR code handles ImportError gracefully
+  "pywin32>=306",
+]
+ocr-fallback = [
+  "pytesseract>=0.3.10",
+  "pillow>=10.0.0",
+]
+dev = [
+  "pytest>=8.0",
+  "pytest-asyncio>=0.23",
+  "ruff>=0.5",
+]
+
+[project.scripts]
+voicectl = "app.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
